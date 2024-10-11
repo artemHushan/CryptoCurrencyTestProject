@@ -34,7 +34,7 @@ namespace CurrencyTestApp.ViewModel
         private static async Task GetCryptocurrencyMapData(
             ObservableCollection<CryptoCurrencyViewInfo> Cryptocurrencies)
         {
-            string apiKey = "b48751a8-ce64-49f1-803a-b878175d23fa"; // Замініть на ваш API ключ
+            string apiKey = "4e8b67c4-f3b3-45fe-8a29-d71af84806f3"; // Замініть на ваш API ключ
             string mapUrl = $"https://pro-api.coinmarketcap.com/v1/cryptocurrency/map?listing_status=active";
             using (HttpClient client = new HttpClient())
             {
@@ -63,7 +63,7 @@ namespace CurrencyTestApp.ViewModel
         // Метод для отримання додаткових метаданих (логотипів і URL)
         private static async Task GetCryptocurrencyMetaData(ObservableCollection<CryptoCurrencyViewInfo> Cryptocurrencies)
         {
-            string apiKey = "b48751a8-ce64-49f1-803a-b878175d23fa"; // Ваш API ключ
+            string apiKey = "4e8b67c4-f3b3-45fe-8a29-d71af84806f3"; // Ваш API ключ
             int batchSize = 1000; // Кількість криптовалют, які запитуються за раз
             for (int i = 0; i < Cryptocurrencies.Count; i += batchSize)
             {
@@ -112,7 +112,7 @@ namespace CurrencyTestApp.ViewModel
 
         private static async Task UpdateHistoricalDataAsync(ObservableCollection<CryptoCurrencyViewInfo> cryptocurrencies, ObservableCollection<CryptoCurrencyViewInfo> CryptocurrenciesTop10)
         {
-            string apiKey = "b48751a8-ce64-49f1-803a-b878175d23fa"; // Ваш API ключ
+            string apiKey = "4e8b67c4-f3b3-45fe-8a29-d71af84806f3"; // Ваш API ключ
             string historicalUrl = $"https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest"; // Запит на останній знімок ринку
             int start = 1;
             int limit = 1000;

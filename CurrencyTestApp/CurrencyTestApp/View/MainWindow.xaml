@@ -25,7 +25,7 @@
         <!-- Ліва частина (меню) -->
         <StackPanel Background="{DynamicResource Background1Brush}" Grid.Column="0" Width="350" Height="Auto" HorizontalAlignment="Left">
             <!-- Логотип з текстом вирівняний по центру і розташований нижче -->
-            <StackPanel Orientation="Horizontal" Margin="10,50,10,40" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal" Margin="10,30,10,30" VerticalAlignment="Center" HorizontalAlignment="Center">
                 <Image Source="/Images/light/cryptocurrency.png" Width="60" Height="60" />
                 <TextBlock Text="CRYPTOCOINS" FontSize="26" FontWeight="Bold" Foreground="#3FC1AA" VerticalAlignment="Center" Margin="10,0,0,0"/>
             </StackPanel>
@@ -85,7 +85,7 @@
 
 
         <!-- Права частина з TabControl без вкладок -->
-        <TabControl Grid.Column="1" Margin="10,120,10,20"  MaxHeight="650" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" SelectedIndex="{Binding SelectedTabIndex}">
+        <TabControl Grid.Column="1" Margin="10,30,10,20"  MaxHeight="650" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" SelectedIndex="{Binding SelectedTabIndex}">
             <TabControl.Resources>
                 <!-- Приховуємо заголовки вкладок -->
                 <Style TargetType="TabItem">
@@ -95,7 +95,7 @@
                 </Style>
                 <!-- Стиль для видалення рамок TabControl -->
             </TabControl.Resources>
-                  <!--Home-->
+            <!--Home-->
             <TabItem>
                 <Grid Background="{DynamicResource Background1Brush}">
                     <DataGrid ItemsSource="{Binding CryptocurrencyTop10}" AutoGenerateColumns="False" 
@@ -138,7 +138,7 @@
                             </Style>
                         </DataGrid.Resources>
                         <DataGrid.Columns>
-                           
+
 
                             <!-- Використовуємо DataGridTemplateColumn для відображення логотипу -->
                             <DataGridTemplateColumn Header="Logo" Width="70">
@@ -188,210 +188,211 @@
                         MouseDoubleClick="DataGrid_MouseDoubleClick">
 
                         <!-- Стиль для заголовків колонок -->
-        <DataGrid.ColumnHeaderStyle>
-            <Style TargetType="DataGridColumnHeader">
-                <Setter Property="Background" Value="#4D97ED" />
+                        <DataGrid.ColumnHeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="Background" Value="#4D97ED" />
                                 <Setter Property="Foreground" Value="{DynamicResource ForegroundBrush}"/>
-                <Setter Property="FontSize" Value="20" />
-                <Setter Property="FontWeight" Value="Medium"/>
-                <Setter Property="HorizontalContentAlignment" Value="Center" />
-            </Style>
-        </DataGrid.ColumnHeaderStyle>
-        <DataGrid.Resources>
-            <Style TargetType="TextBlock" x:Key="DataGridTextStyle">
-                <Setter Property="FontSize" Value="18" />
+                                <Setter Property="FontSize" Value="20" />
+                                <Setter Property="FontWeight" Value="Medium"/>
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGrid.ColumnHeaderStyle>
+                        <DataGrid.Resources>
+                            <Style TargetType="TextBlock" x:Key="DataGridTextStyle">
+                                <Setter Property="FontSize" Value="18" />
 
                                 <Setter Property="Foreground" Value="{DynamicResource ForegroundBrush}" />
-                <Setter Property="VerticalAlignment" Value="Center" />
-                <Setter Property="HorizontalAlignment" Value="Center" />
-            </Style>
-            <Style TargetType="DataGridRow">
+                                <Setter Property="VerticalAlignment" Value="Center" />
+                                <Setter Property="HorizontalAlignment" Value="Center" />
+                            </Style>
+                            <Style TargetType="DataGridRow">
                                 <Setter Property="Background" Value="{DynamicResource Background1Brush}" />
-                <!-- Задайте тут ваш колір -->
+                                <!-- Задайте тут ваш колір -->
                                 <Setter Property="Foreground" Value="{DynamicResource ForegroundBrush}" />
-                <Setter Property="BorderBrush" Value="Transparent" />
-            </Style>
+                                <Setter Property="BorderBrush" Value="Transparent" />
+                            </Style>
                         </DataGrid.Resources>
-        <DataGrid.Columns>
-            <!-- Використовуємо DataGridTemplateColumn для відображення логотипу -->
-            <DataGridTemplateColumn Header="Logo" Width="70">
-                <DataGridTemplateColumn.CellTemplate>
-                    <DataTemplate>
-                        <Image Source="{Binding Logo}" Width="50" Height="50"/>
-                    </DataTemplate>
-                </DataGridTemplateColumn.CellTemplate>
-            </DataGridTemplateColumn>
+                        <DataGrid.Columns>
+                            <!-- Використовуємо DataGridTemplateColumn для відображення логотипу -->
+                            <DataGridTemplateColumn Header="Logo" Width="70">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Image Source="{Binding Logo}" Width="50" Height="50"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
 
-            <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="160" ElementStyle="{StaticResource DataGridTextStyle}" />
-            <DataGridTextColumn Header="Symbol" Binding="{Binding Symbol}" Width="150" ElementStyle="{StaticResource DataGridTextStyle}" />
-            <DataGridTextColumn Header="Slug" Binding="{Binding Slug}" Width="170" ElementStyle="{StaticResource DataGridTextStyle}" />
-            <DataGridTextColumn Header="Active" Binding="{Binding IsActive}" Width="100" ElementStyle="{StaticResource DataGridTextStyle}" />
-            <DataGridTextColumn Header="Price" Binding="{Binding MarketInfo.Price}" Width="160" ElementStyle="{StaticResource DataGridTextStyle}" />
-            <DataGridTextColumn Header="PercentChange" Binding="{Binding MarketInfo.PercentChange24h, StringFormat='{}{0}%'}"  Width="140" ElementStyle="{StaticResource DataGridTextStyle}" />
-            <!-- Відображення URL як гіперпосилання -->
-            <DataGridTemplateColumn Header="WebUri" Width="200" >
-                <DataGridTemplateColumn.CellTemplate>
-                    <DataTemplate>
-                        <TextBlock >
+                            <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="160" ElementStyle="{StaticResource DataGridTextStyle}" />
+                            <DataGridTextColumn Header="Symbol" Binding="{Binding Symbol}" Width="150" ElementStyle="{StaticResource DataGridTextStyle}" />
+                            <DataGridTextColumn Header="Slug" Binding="{Binding Slug}" Width="170" ElementStyle="{StaticResource DataGridTextStyle}" />
+                            <DataGridTextColumn Header="Active" Binding="{Binding IsActive}" Width="100" ElementStyle="{StaticResource DataGridTextStyle}" />
+                            <DataGridTextColumn Header="Price" Binding="{Binding MarketInfo.Price}" Width="160" ElementStyle="{StaticResource DataGridTextStyle}" />
+                            <DataGridTextColumn Header="PercentChange" Binding="{Binding MarketInfo.PercentChange24h, StringFormat='{}{0}%'}"  Width="140" ElementStyle="{StaticResource DataGridTextStyle}" />
+                            <!-- Відображення URL як гіперпосилання -->
+                            <DataGridTemplateColumn Header="WebUri" Width="200" >
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock >
                             <Hyperlink NavigateUri="{Binding ResourceUrl}" RequestNavigate="Hyperlink_RequestNavigate">
                                 <TextBlock Text="{Binding ResourceUrl}"  />
                             </Hyperlink>
                         </TextBlock>
-                    </DataTemplate>
-                </DataGridTemplateColumn.CellTemplate>
-            </DataGridTemplateColumn>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
                         </DataGrid.Columns>
 
-    </DataGrid>
-</Grid>
+                    </DataGrid>
+                </Grid>
 
             </TabItem>
             <Grid Background="{DynamicResource Background2Brush}" Opacity="1">
-                <StackPanel Grid.Column="1" Background="{DynamicResource Background1Brush}" Orientation="Horizontal" Height="180" Width="500" Margin="20,120,11,0" VerticalAlignment="Top" HorizontalAlignment="Center">
-                    <StackPanel Grid.Column="1" Background="{DynamicResource Background2Brush}" Orientation="Horizontal" Height="60" Width="500" Margin="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <StackPanel Background="Transparent" VerticalAlignment="Center" HorizontalAlignment="Center" Width="500">
+                    <!-- Перший елемент -->
+                    <StackPanel Background="{DynamicResource Background1Brush}" Orientation="Horizontal" Height="60" VerticalAlignment="Center">
                         <ComboBox x:Name="CryptocurrencyComboBoxFirst"
-                       Width="200"
-                       Margin="0,0,10,0"
-                       ItemsSource="{Binding CryptocurrencysToExchange}"
-                       DisplayMemberPath="Name"
-                       SelectedValuePath="Name"
-                       SelectedValue="{Binding SelectedCryptocurrencyFirst, Mode=TwoWay}"
-                       FontSize="20"
-                      
-                       VerticalAlignment="Center" />
+                          Width="200"
+                          Margin="0,0,10,0"
+                          ItemsSource="{Binding CryptocurrencysToExchange}"
+                          DisplayMemberPath="Name"
+                          SelectedValuePath="Name"
+                          SelectedValue="{Binding SelectedCryptocurrencyFirst, Mode=TwoWay}"
+                          FontSize="20"
+                          VerticalAlignment="Center" />
                         <TextBox x:Name="CryptoTextBoxFirst"
-                      Width="280"
-                      Height="35" 
-                      Background="{DynamicResource Background1Brush}"
-                      Foreground="{DynamicResource ForegroundBrush}"
-                            Text="{Binding CryptoTextFirst, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                      PreviewTextInput="CryptoTextBoxFirst_PreviewTextInput"
-                      FontSize="20"
-                      HorizontalContentAlignment="Center"
-                      VerticalContentAlignment="Center" />
+                          Width="280"
+                          Height="35"
+                          Background="{DynamicResource Background1Brush}"
+                          Foreground="{DynamicResource ForegroundBrush}"
+                          Text="{Binding CryptoTextFirst, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                          PreviewTextInput="CryptoTextBoxFirst_PreviewTextInput"
+                          FontSize="20"
+                          HorizontalContentAlignment="Center"
+                          VerticalContentAlignment="Center" />
                     </StackPanel>
-                </StackPanel>
 
-                <StackPanel Grid.Column="1" Background="Transparent" Orientation="Horizontal" Height="60" Width="500" Margin="450,300,11,0" VerticalAlignment="Top" HorizontalAlignment="Center">
-                    <Image Source="/Images/light/switch.png" Width="60" Height="60" />
-                </StackPanel>
+                    <!-- Переключення -->
+                    <StackPanel Background="Transparent" Orientation="Horizontal"  HorizontalAlignment="Center" Height="60" VerticalAlignment="Center" >
+                        <Image Source="/Images/light/switch.png" Width="60" Height="60" HorizontalAlignment="Center"/>
+                    </StackPanel>
 
-                <StackPanel Grid.Column="1" Background="{DynamicResource Background1Brush}" Orientation="Horizontal" Height="180" Width="500" Margin="20,370,11,0" VerticalAlignment="Top" HorizontalAlignment="Center">
-                    <StackPanel Grid.Column="1" Background="{DynamicResource Background2Brush}" Orientation="Horizontal" Height="60" Width="500" Margin="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <!-- Другий елемент -->
+                    <StackPanel Background="{DynamicResource Background1Brush}" Orientation="Horizontal" Height="60" VerticalAlignment="Center">
                         <ComboBox x:Name="CryptocurrencyComboBoxSecond"
-                       Width="200"
-                       Margin="0,0,10,0"
-                       ItemsSource="{Binding CryptocurrencysToExchange}"
-                       DisplayMemberPath="Name"
-                       SelectedValuePath="Name"
-                       SelectedValue="{Binding SelectedCryptocurrencySecond, Mode=TwoWay}"
-                       FontSize="20"
-                       VerticalAlignment="Center"
-                     />
-                        <TextBox x:Name="CryptoTextBoxSecond" 
-                      Text="{Binding CryptoTextSecond, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
-                      Width="280" 
-                      Height="35" 
-                            FontSize="20"
-                      Background="{DynamicResource Background1Brush}"
-                      Foreground="{DynamicResource ForegroundBrush}"
-                      HorizontalContentAlignment="Center"
-                      VerticalContentAlignment="Center" />
+                          Width="200"
+                          Margin="0,0,10,0"
+                          ItemsSource="{Binding CryptocurrencysToExchange}"
+                          DisplayMemberPath="Name"
+                          SelectedValuePath="Name"
+                          SelectedValue="{Binding SelectedCryptocurrencySecond, Mode=TwoWay}"
+                          FontSize="20"
+                          VerticalAlignment="Center" />
+                        <TextBox x:Name="CryptoTextBoxSecond"
+                          Text="{Binding CryptoTextSecond, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                          Width="280"
+                          Height="35"
+                          FontSize="20"
+                          Background="{DynamicResource Background1Brush}"
+                          Foreground="{DynamicResource ForegroundBrush}"
+                          HorizontalContentAlignment="Center"
+                          VerticalContentAlignment="Center" />
                     </StackPanel>
                 </StackPanel>
             </Grid>
 
-
-
             <TabItem>
                 <Grid Background="{DynamicResource Background2Brush}" Opacity="1">
-                    <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20">
-                        <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center" Margin="400,0,20,0" >
-                            <TextBlock Text="Theme" FontSize="48" Margin="0,0,20,0"
-                                       Foreground="{DynamicResource ForegroundBrush}"
-                                      />
-                            <Button Command="{Binding SwapThemeCommand}"  Foreground="{DynamicResource ForegroundBrush}"
-                                    Background="{DynamicResource Background2Brush}" Content="{Binding Theme}" Width="200" FontSize="48"/>
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Width="500">
+                        <!-- Заголовок Теми -->
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
+                            <TextBlock Text="Theme" FontSize="48"
+                                             Foreground="{DynamicResource ForegroundBrush}" />
+                            <Button Command="{Binding SwapThemeCommand}"
+                                          Foreground="{DynamicResource ForegroundBrush}"
+                                          Background="{DynamicResource Background2Brush}"
+                                          Content="{Binding Theme}"
+                                          Width="200"
+                                          FontSize="48" />
                         </StackPanel>
                     </StackPanel>
                 </Grid>
             </TabItem>
+
             <!-- Вкладка Info -->
-      <TabItem>
+            <TabItem>
                 <Grid Background="{DynamicResource Background2Brush}" Opacity="1">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
 
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        
-        <!-- Логотип та назва -->
-        <StackPanel Orientation="Horizontal" Margin="20,20,0,0" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
-            <Image Source="{Binding DetailsInfo.Logo}" 
-                   Width="170" Height="170" 
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Логотип та назва -->
+                    <StackPanel Orientation="Horizontal" Margin="20,20,0,0" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+                        <Image Source="{Binding DetailsInfo.Logo}" 
+                   Width="150" Height="150" 
                    Margin="20,20,10,0" />
-            <TextBlock Text="{Binding DetailsInfo.Name}" 
+                        <TextBlock Text="{Binding DetailsInfo.Name}" 
                        FontSize="60" FontWeight="Bold" 
-                       Margin="40,20,10,0"
+                       Margin="30,20,10,0"
                        VerticalAlignment="Center" />
-        </StackPanel>
+                    </StackPanel>
 
-        <!-- Інформація під логотипом -->
-        <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" 
+                    <!-- Інформація під логотипом -->
+                    <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" 
                     Orientation="Vertical" Margin="20,80,0,0"
                     >
-            
-            <StackPanel Orientation="Horizontal" Margin="0,0,0,30">
-                <TextBlock Foreground="{DynamicResource ForegroundBrush}"  Text="{Binding DetailsInfo.Symbol, StringFormat='Symbol: {0}'}" 
+
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,30">
+                            <TextBlock Foreground="{DynamicResource ForegroundBrush}"  Text="{Binding DetailsInfo.Symbol, StringFormat='Symbol: {0}'}" 
                            FontSize="26" Width="500" Margin="0,5"/>
-                <TextBlock Text="{Binding DetailsInfo.Slug, StringFormat='Slug: {0}'}" 
-                           FontSize="26" Width="500" Margin="50,5"
+                            <TextBlock Text="{Binding DetailsInfo.Slug, StringFormat='Slug: {0}'}" 
+                           FontSize="26" Width="500" Margin="30,5"
                            Foreground="{DynamicResource ForegroundBrush}"/>
-            </StackPanel>
-            
-            <StackPanel Orientation="Horizontal" Margin="0,0,0,30">
-                <TextBlock Text="{Binding DetailsInfo.MarketInfo.Price, StringFormat='Price: {0}'}" 
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,30">
+                            <TextBlock Text="{Binding DetailsInfo.MarketInfo.Price, StringFormat='Price: {0}'}" 
                            FontSize="26" Width="500" Margin="0,5"
                            Foreground="{DynamicResource ForegroundBrush}"/>
-                <TextBlock Text="{Binding DetailsInfo.HistoricalInfo.ReleaseDate, StringFormat='Release date: {0}'}" 
-                           FontSize="26" Width="500" Margin="50,5"
+                            <TextBlock Text="{Binding DetailsInfo.HistoricalInfo.ReleaseDate, StringFormat='Release date: {0}'}" 
+                           FontSize="26" Width="500" Margin="30,5"
                            Foreground="{DynamicResource ForegroundBrush}"/>
-            </StackPanel>
-            
-            <StackPanel Orientation="Horizontal" Margin="0,0,0,30">
-                <TextBlock Text="{Binding DetailsInfo.MarketInfo.PercentChange24h, StringFormat='PercentChange24h: {0}'}" 
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,30">
+                            <TextBlock Text="{Binding DetailsInfo.MarketInfo.PercentChange24h, StringFormat='PercentChange24h: {0}'}" 
                            FontSize="26" Width="500" Margin="0,5"
                            Foreground="{DynamicResource ForegroundBrush}"/>
-                <TextBlock Text="{Binding DetailsInfo.MarketInfo.Volume24h, StringFormat='Volume24h: {0}'}" 
-                           FontSize="26" Width="500" Margin="50,5"
+                            <TextBlock Text="{Binding DetailsInfo.MarketInfo.Volume24h, StringFormat='Volume24h: {0}'}" 
+                           FontSize="26" Width="500" Margin="30,5"
                            Foreground="{DynamicResource ForegroundBrush}"/>
-            </StackPanel>
-            
-            <StackPanel Orientation="Horizontal" Margin="0,0,0,30">
-                <TextBlock Text="{Binding DetailsInfo.HistoricalInfo.MaxSupply, StringFormat='MaxSupply: {0}'}" 
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,30">
+                            <TextBlock Text="{Binding DetailsInfo.HistoricalInfo.MaxSupply, StringFormat='MaxSupply: {0}'}" 
                            FontSize="26" Width="500" Margin="0,5"
                            Foreground="{DynamicResource ForegroundBrush}"/>
-                <TextBlock Text="{Binding DetailsInfo.HistoricalInfo.TotalSupply, StringFormat='TotalSupply: {0}'}" 
-                           FontSize="26" Width="500" Margin="50,5"
+                            <TextBlock Text="{Binding DetailsInfo.HistoricalInfo.TotalSupply, StringFormat='TotalSupply: {0}'}" 
+                           FontSize="26" Width="500" Margin="30,5"
                            Foreground="{DynamicResource ForegroundBrush}"/>
-            </StackPanel>
-        </StackPanel>
-    </Grid>
-</TabItem>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
 
 
         </TabControl>
-        <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="20,30,20,50" VerticalAlignment="Top" HorizontalAlignment="Left" >
+        <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="20,10,20,30" VerticalAlignment="Top" HorizontalAlignment="Left" >
             <Image Source="{Binding MainImage }" Width="60" Height="60" />
             <TextBlock Text="{Binding NameOfTabPage }"  FontSize="26" FontWeight="Bold" Foreground="#555353" VerticalAlignment="Center" Margin="10,0,0,0"/>
         </StackPanel>
-        <StackPanel Grid.Column="1" Visibility="{Binding SearchVisible}" Orientation="Horizontal" Margin="20,60,11,50" VerticalAlignment="Top" HorizontalAlignment="Right" >
+        <StackPanel Grid.Column="1" Visibility="{Binding SearchVisible}" Orientation="Horizontal" Margin="20,10,11,30" VerticalAlignment="Top" HorizontalAlignment="Right" >
             <TextBox Width="250" Height="50"   Text="{Binding SearchText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" FontWeight="Medium" FontSize="24" Foreground="#555353"  VerticalContentAlignment="Center"  VerticalAlignment="Center" Margin="10,0,0,0"/>
         </StackPanel>
-
     </Grid>
 </Window>

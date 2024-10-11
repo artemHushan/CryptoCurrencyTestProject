@@ -223,11 +223,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Програмування\\Test\\CurrencyTestApp\\CurrencyTestApp\\CurrencyTestApp.csproj",
+      "projectUniqueName": "D:\\Програмування\\1\\CryptoCurrencyTestProject\\CurrencyTestApp\\CurrencyTestApp\\CurrencyTestApp.csproj",
       "projectName": "CurrencyTestApp",
-      "projectPath": "D:\\Програмування\\Test\\CurrencyTestApp\\CurrencyTestApp\\CurrencyTestApp.csproj",
+      "projectPath": "D:\\Програмування\\1\\CryptoCurrencyTestProject\\CurrencyTestApp\\CurrencyTestApp\\CurrencyTestApp.csproj",
       "packagesPath": "C:\\Users\\Артем Гушан\\.nuget\\packages\\",
-      "outputPath": "D:\\Програмування\\Test\\CurrencyTestApp\\CurrencyTestApp\\obj\\",
+      "outputPath": "D:\\Програмування\\1\\CryptoCurrencyTestProject\\CurrencyTestApp\\CurrencyTestApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

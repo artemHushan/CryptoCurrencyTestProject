@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OYZmGcLyF3Q=",
+  "dgSpecHash": "f7eg8yTXMQ0=",
   "success": true,
-  "projectFilePath": "D:\\Програмування\\Test\\CurrencyTestApp\\CurrencyTestApp\\CurrencyTestApp.csproj",
+  "projectFilePath": "D:\\Програмування\\1\\CryptoCurrencyTestProject\\CurrencyTestApp\\CurrencyTestApp\\CurrencyTestApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Артем Гушан\\.nuget\\packages\\devexpressmvvm\\23.2.3\\devexpressmvvm.23.2.3.nupkg.sha512",
     "C:\\Users\\Артем Гушан\\.nuget\\packages\\fody\\6.6.4\\fody.6.6.4.nupkg.sha512",
