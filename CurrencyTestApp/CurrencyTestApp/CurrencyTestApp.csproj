@@ -1,0 +1,80 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\light\allCurrencyActive.png" />
+    <None Remove="Images\light\allCurrencyNonActive.png" />
+    <None Remove="Images\light\cryptocurrency.ico" />
+    <None Remove="Images\light\cryptocurrency.png" />
+    <None Remove="Images\light\exchangeActive.png" />
+    <None Remove="Images\light\exchangeNonActive.png" />
+    <None Remove="Images\light\homepageActive.png" />
+    <None Remove="Images\light\homepageNonActive.png" />
+    <None Remove="Images\light\search.png" />
+    <None Remove="Images\light\settingActive.png" />
+    <None Remove="Images\light\settingNonActive.png" />
+    <None Remove="Images\light\switch.png" />
+    <None Remove="Images\load-8510.gif" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Images\Dark\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DevExpressMvvm" Version="23.2.3" />
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.135" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="PropertyChanged.Fody" Version="4.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\light\allCurrencyActive.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\light\allCurrencyNonActive.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\light\cryptocurrency.ico">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\light\cryptocurrency.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\light\exchangeActive.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\light\exchangeNonActive.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\light\homepageActive.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\light\homepageNonActive.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\light\search.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\light\settingActive.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\light\settingNonActive.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\light\switch.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\load-8510.gif">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+</Project>

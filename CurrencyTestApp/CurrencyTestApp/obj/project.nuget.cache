@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "OYZmGcLyF3Q=",
+  "success": true,
+  "projectFilePath": "D:\\Програмування\\Test\\CurrencyTestApp\\CurrencyTestApp\\CurrencyTestApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Артем Гушан\\.nuget\\packages\\devexpressmvvm\\23.2.3\\devexpressmvvm.23.2.3.nupkg.sha512",
+    "C:\\Users\\Артем Гушан\\.nuget\\packages\\fody\\6.6.4\\fody.6.6.4.nupkg.sha512",
+    "C:\\Users\\Артем Гушан\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.135\\microsoft.xaml.behaviors.wpf.1.1.135.nupkg.sha512",
+    "C:\\Users\\Артем Гушан\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\Артем Гушан\\.nuget\\packages\\propertychanged.fody\\4.1.0\\propertychanged.fody.4.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
